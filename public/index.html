@@ -3,10 +3,75 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="">
+    <header>
+    </header>
+    <main>
+      <div class="menu-lateral">
+        <div class="">
+          <form class="" action="index.html" method="post">
+            <div class="">
+              <label for=""></label>
+              <input type="search" name="" value="" placeholder="Search">
+            </div>
+          </form>
+        </div>
+        <div class="" style="margin: 40px 24px;">
+          <span>Cadastre-se já</span>
+          <form class="" action="index.html" method="post" style="margin-top: 25px;">
+            <div class="">
+              <input type="email" name="email" value="">
+              <label for="email">Email</label>
+            </div>
+            <div class="">
+              <input type="password" name="" value="">
+              <label for="">Senha</label>
+            </div>
+            <div class="">
+              <input type="password" name="repita" value="">
+              <label for="repita">Repita a senha</label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page-body">
+        <!--<div class="container">
 
-    </div>
+        </div>-->
+      </div>
+    </main>
+    <footer>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+      $('input').keyup(function(){
+        var value = $(this).val();
+        value.length > 0 ? $(this).addClass('valid').removeClass('invalid') :
+        $(this).addClass('invalid').removeClass('valid');
+      });
+      $('input').keyup(function(){
+        var value = $(this).val();
+        var to = $(this).attr('name');
+        value.length > 0 ? $('label[for="'+to+'"]').addClass('active') :
+        $('label[for="'+to+'"]').removeClass('active');
+      });
+      $('input[type="email"]').keyup(function(){
+        var valid = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        var to = $(this).attr('name');
+        valid.test($(this).val()) ? $(this).addClass('valid').removeClass('invalid') :
+        $(this).addClass('invalid').removeClass('valid');
+      });
+      $('input[type="password"]').keyup(function(){
+        $('input[type="password"]:first-child').val() == $(this).val() ?
+        $(this).addClass('valid').removeClass('invalid') :
+        $(this).addClass('invalid').removeClass('valid');
+      });
+    </script>
   </body>
 </html>
